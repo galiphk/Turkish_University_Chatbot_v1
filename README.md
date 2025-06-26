@@ -51,10 +51,8 @@ Bu proje, üniversite tercih sürecinde öğrencilere yardımcı olmak için gel
 - Sadece üniversiteler, bölümler ve şehirler hakkında bilgi verir.
 - Yanıtlar Türkçe ve kullanıcı dostudur.
 
-## Katkı
-Katkıda bulunmak için lütfen bir fork oluşturun ve pull request gönderin.
 
-## Lisans
-Bu proje MIT lisansı ile lisanslanmıştır.
+
+
 
 
