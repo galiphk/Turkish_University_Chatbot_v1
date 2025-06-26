@@ -1,0 +1,34 @@
+language: tr
+version: '3.1'
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: LanguageModelFeaturizer
+    model_name: 'bert'
+    model_weights: 'bert-base-multilingual-cased'
+    cache_dir: null
+    use_masked_language_model: false
+  - name: DIETClassifier
+    epochs: 300
+    constrain_similarities: true
+    learning_rate: 0.002
+    batch_size: 64
+    evaluate_every_number_of_epochs: 10
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+    core_fallback_action_name: action_llm_proxy
+    core_fallback_threshold: 0.3
+  - name: UnexpecTEDIntentPolicy
+assistant_id: 20250616-200921-adiabatic-siding

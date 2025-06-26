@@ -1,0 +1,169 @@
+version: '3.1'
+
+nlu:
+  - intent: greet
+    examples: |
+      - merhaba
+      - selam
+      - hey
+
+  - intent: goodbye
+    examples: |
+      - görüşürüz
+      - hoşça kal
+      - bay bay
+      - kendine iyi bak
+      - sonra görüşürüz
+      - allahaısmarladık
+      - bye
+      - iyi günler
+
+  - intent: thank_you
+    examples: |
+      - teşekkür ederim
+      - sağ ol
+      - çok teşekkürler
+      - minnettarım
+      - eyvallah
+      - thanks
+      - çok sağ ol
+      - teşekkürler
+
+  - intent: generate_preferences
+    examples: |
+      - tercih listemi hazırla
+      - bana uygun üniversiteleri listeler misin?
+      - tercih listemi oluşturur musun?
+      - öneri alabilir miyim?
+      - puanıma uygun bölümleri göster
+      - benim için uygun bölümler hangileri?
+      - en iyi üniversiteleri sıralar mısın?
+      - bu puanla nereyi kazanabilirim?
+      - öneride bulunabilir misin?
+      - bana uygun üniversite önerileri sun
+      - tercih listemi yeniden düzenle
+      - hangi üniversiteler benim için uygun?
+      - liste oluştur
+      - listemi hazırla
+      - tercih listesini ver
+      - 10 tane tercih getir
+      - bana 15 öneri sun
+      - maksimum 20 tercih göster
+      - en fazla 25 üniversite listesi oluştur
+      - maks 5 tercih ver
+      - 30 tane bölüm öner
+      - 12 tercih listesi hazırla
+      - 17 öneri sun
+      - bana öneri listesi çıkarır mısın?
+      - puanımla en iyi uyumlu bölümleri bulabilir misin?
+
+  - intent: user_message
+    examples: |
+      - bilgisayar mühendisliği istiyorum
+      - İstanbul'da bir üniversite tercih ediyorum
+      - Marmara Üniversitesi güzel olabilir
+      - psikoloji bölümü tercihim
+      - tıp fakültesi düşünüyorum
+      - Boğaziçi Üniversitesi hayalim
+      - Koç Üniversitesi olabilir
+      - İstanbul Teknik Üniversitesi yazalım mı?
+      - yüksek puanlı üniversitelere bakabilir miyiz?
+      - yazılım mühendisliği yazmak istiyorum
+      - Kültür Üniversitesi'ni tercih edebilirim
+      - hukuk fakültesi tercihim olabilir
+      - İstanbul Aydın Üniversitesi olsun
+      - Bursa'da okumayı düşünüyorum
+      - şehir olarak İzmir düşünüyorum
+      - sadece devlet okullarına bakmak istiyorum
+      - Ankara Üniversitesi olabilir mi?
+      - Elektrik elektronik mühendisliği yazalım mı?
+      - Karabük Üniversitesi düşünebilirim
+      - Gıda mühendisliği olabilir
+      - Adana'da bir okul yazalım mı?
+      - Selçuk Üniversitesi istiyorum
+      - Biyomedikal mühendisliği düşünebilirim
+      - Manisa'da bir üniversite olabilir
+      - Uçak mühendisliği yazmak istiyorum
+      - Atatürk Üniversitesi tercihim olabilir
+      - Muğla Sıtkı Koçman Üniversitesi olabilir mi?
+      - Diş hekimliği yazalım mı?
+      - Antalya'da bir bölüm düşünebilirim
+      - İnönü Üniversitesi olabilir
+      - Hemşirelik bölümünü tercih edebilirim
+      - Trabzon'da okumak istiyorum
+      - Harran Üniversitesi tercihim olabilir
+      - Makine mühendisliğini de ekle
+      - Şehirleri sil
+      - Tercih listemi temizle
+      - Diyetisyenlik bölümü de olur
+      - puanım 450
+      - 420 civarında bir puanım var
+      - 390 puanla nereyi tercih edebilirim?
+      - 470 puanım var, ne yazabilirim?
+      - 365 puanım var
+      - 430 civarında bir puanla nereye gidebilirim?
+      - 400 puanım var
+      - 385 puanla uygun bir bölüm bakabilir miyiz?
+      - sıralamam 100 bin
+      - ilk 50000'deyim
+      - 50000-100000 arası bir bölüm bakabilir miyiz?
+      - 200 bin sıralamam var
+      - sıralamam 35000
+      - 150 binlerdeyim
+      - 25000 ile 40000 arası bölümler
+      - sıralamam 42000 civarında
+      - başarı sıram 68000
+      - başarı sıram 70000 civarı
+      - 85000 sıralamam var
+      - 50.000'deyim
+      - sıralamam ilk 100 binde
+      - 30000. sıralardayım
+      - 50 bin ile 100 bin arasında olabilir
+      - İstanbul'u da ekle
+      - İzmir'i de ekle
+      - Ankara'yı da listeye ekle
+      - İstanbul'u çıkar
+      - şehirleri sil
+      - tüm bölümleri kaldır
+      - endüstri mühendisliğini sil
+      - mimarlığı da ekle
+      - devlet üniversitelerini çıkar
+      - koç üniversitesini sil
+      - tercihleri temizle
+      - bölümleri sıfırla
+      - Boğaziçi Üniversitesi'ni ekle
+
+  - intent: get_info
+    examples: |
+      - bilgisayar mühendisliği hakkında bilgi verir misin?
+      - sana sıralamamı versem benim için üniversite sıralaması yapabilir misin?
+      - mimarlık nasıl bir bölüm?
+      - gastronomi bölümü nedir?
+      - moleküler biyoloji hakkında ne biliyorsun?
+      - üniversite tercihlerimde nelere diikat etmeliyim?
+      - yazılım mühendisliği hangi alanlarda çalışır?
+      - endüstri mühendisliği iş olanakları neler?
+      - hukuk fakültesi okuması zor mu?
+      - psikoloji bölümü iyi mi?
+      - tıp fakültesi hakkında genel bilgi verir misin?
+      - mimarlık bölümü hakkında biraz bilgi alabilir miyim?
+      - moleküler biyoloji mezunları nerelerde çalışabilir?
+      - işletme bölümü ne yapar?
+      - iç mimarlık hakkında ne düşünüyorsun?
+      - çocuk gelişimi bölümü nedir?
+      - tarih bölümü hakkında detaylı bilgi verir misin?
+      - ODTÜ nasıl bir üniversite?
+      - Hacettepe Üniversitesi'nin akademik başarısı nasıl?
+      - Yıldız Teknik Üniversitesi hakkında yorumun nedir?
+      - Akdeniz Üniversitesi iyi bir okul mu?
+      - Sabancı Üniversitesi'nin avantajları neler?
+      - Boğaziçi Üniversitesi hangi alanlarda güçlü?
+      - İstanbul Teknik Üniversitesi'nin mühendislik eğitimi hakkında ne düşünüyorsun?
+      - Koç Üniversitesi hakkında bilgi alabilir miyim?
+      - Ege Üniversitesi eğitim kalitesi nasıl?
+      - Ankara Üniversitesi hakkında ne söylersin?
+      - Marmara Üniversitesi'nin hukuk fakültesi nasıldır?
+      - vakıf üniversiteleri kaliteli midir?
+      - devlet üniversiteleri ile vakıf üniversiteleri arasındaki fark nedir?
+      - eşit ağırlık bölümleri arasında popüler olanlar hangileri?
+      - üniversite sınavı sonrası hangi bölümler daha çok tercih ediliyor?

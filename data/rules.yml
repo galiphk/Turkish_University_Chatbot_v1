@@ -1,0 +1,33 @@
+version: "3.1"
+
+rules:
+
+  - rule: Selamlaşma
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Vedalaşma
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+  
+  - rule: Teşekkür mesajı
+    steps:
+      - intent: thank_you
+      - action: utter_thank_you
+
+  - rule: LLM'e yönlendir
+    steps:
+      - intent: user_message
+      - action: action_llm_proxy
+
+  - rule: Tercih listesi oluştur
+    steps:
+      - intent: generate_preferences
+      - action: action_generate_preferences
+
+  - rule: Bilgi isteyen kullanıcı
+    steps:
+      - intent: get_info
+      - action: action_provide_info

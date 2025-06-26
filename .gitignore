@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Rasa
+*.db
+*.lock
+.rasa/
+
+# Environment
+.env
+.venv/
+venv/
+ENV/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node.js
+frontend/node_modules/
+frontend/build/
+
+# Models
+models/*.tar.gz
+
+# Excel & PDF outputs
+*.xlsx
+backend/pdfs/
+
+# Logs
+*.log
+
+# Misc
+*.bak
+*.swp

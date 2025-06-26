@@ -1,0 +1,81 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - user_message
+  - generate_preferences
+  - get_info
+  - set_pref_count
+  - thank_you
+
+entities:
+  - city
+  - major
+  - school
+  - score
+  - school_type
+  - faculty
+  - score_type
+
+slots:
+  city:
+    type: list
+    mappings: []
+    influence_conversation: false
+
+  major:
+    type: list
+    mappings: []
+    influence_conversation: false
+
+  school:
+    type: list
+    mappings: []
+    influence_conversation: false
+
+  score:
+    type: text
+    mappings: []
+    influence_conversation: false
+
+  ranking:
+    type: text
+    mappings: []
+    influence_conversation: false
+
+  school_type:
+    type: text
+    mappings: []
+    influence_conversation: false
+
+  score_type:
+    type: text
+    mappings: []
+    influence_conversation: false
+
+  pref_list:
+    type: list
+    mappings:
+      - type: custom
+    influence_conversation: false
+
+  pref_count:
+    type: text
+    mappings: []
+    influence_conversation: false
+
+responses:
+  utter_greet:
+    - text: "Merhaba! Sana tercih listenle ilgili nasıl yardımcı olabilirim?"
+  utter_goodbye:
+    - text: Görüşmek üzere! Umarım tercihlerin senin için en iyisi olur 😊
+    - text: Hoşça kal! Yardımcı olabildiysem ne mutlu bana 🎓
+  utter_thank_you:
+    - text: Rica ederim 😊 Yardımcı olabildiysem ne mutlu!
+    - text: Her zaman buradayım, tekrar görüşmek üzere! 🙏
+
+actions:
+  - action_llm_proxy
+  - action_generate_preferences
+  - action_provide_info
